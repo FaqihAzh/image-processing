@@ -14,18 +14,34 @@ def grayscaleToBinary(grayscaleValues, threshold):
         binaryValues.append(1 if gray > threshold else 0)
     return binaryValues
 
-# Input RGB array
-rgbValues = [
-    (255, 255, 0),  # Yellow
-    (255, 102, 0),  # Orange
-    (0, 255, 0),    # Green
-    (0, 255, 255),  # Cyan
-    (204, 102, 204),# Violet
-    (255, 255, 255),# White
-    (0, 0, 0),      # Black
-    (102, 255, 204),# Turquoise
-    (153, 102, 51)  # Brown
+# def getDynamicRGBValues():
+#     rgbValues = []
+#     count = int(input("Berapa banyak RGB yang ingin dikonversi? "))
+    
+#     for i in range(count):
+#         rgb = input(f"Masukkan nilai RGB ke-{i+1} (format: R,G,B): ")
+#         r, g, b = map(int, rgb.split(','))
+#         rgbValues.append((r, g, b))
+    
+#     return rgbValues
+
+# Static Input RGB
+rgbStaticValues = [
+    (255, 255, 0),  
+    (255, 102, 0),  
+    (0, 255, 0),    
+    (0, 255, 255),  
+    (204, 102, 204),
+    (255, 255, 255),
+    (0, 0, 0),      
+    (102, 255, 204),
+    (153, 102, 51)  
 ]
+
+# Dynamic Input RGB
+# rgbDynamicValues = getDynamicRGBValues()
+
+rgbValues = rgbStaticValues
 
 # RGB to Grayscale Conversion
 grayscaleValues = rgbToGrayscale(rgbValues)
